@@ -9,10 +9,10 @@ from .models.periodo import Periodo
 from .models.plan_mensaje import PlanMensaje
 
 # Register your models here.
-admin.register(Asistencia)
-admin.register(EventoProgramado)
-admin.register(Evento)
-admin.register(Matricula)
-admin.register(Mensaje)
-admin.register(Periodo)
-admin.register(PlanMensaje)
+admin.site.register(Asistencia)
+admin.site.register(EventoProgramado)
+admin.site.register(Evento)
+admin.site.register(Matricula)
+admin.site.register(Mensaje)
+admin.site.register(Periodo)
+admin.site.register(PlanMensaje)

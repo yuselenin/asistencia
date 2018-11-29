@@ -10,7 +10,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.utils.translation import ugettext_lazy as _
 
 # models
-from .models import Usuario
+from .models import Usuario, Persona
 
 
 class UsuarioCreationForm(UserCreationForm):
@@ -44,6 +44,12 @@ class UsuarioAdmin(UserAdmin):
     raw_id_fields = ('persona',)
 
 
+class PersonaAdmin(admin.ModelAdmin):
+    list_display = ('id', 'nombres', 'apellidos', 'dni', 'qrcode')
+    search_fields = ('nombres', 'apellidos', 'dni')
+
+
 admin.site.register(Usuario, UsuarioAdmin)
 admin.site.register(ContentType)
+admin.site.register(Persona, PersonaAdmin)
 admin.site.register(Permission)
